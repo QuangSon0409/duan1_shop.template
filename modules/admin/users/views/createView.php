@@ -1,4 +1,4 @@
-<?php get_header('', 'Chỉnh sửa danh mục sản phẩm') ?>
+<?php get_header('', 'Tạo mới tài khoản') ?>
 
     <!--begin::Subheader-->
     <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
@@ -6,7 +6,7 @@
             <!--begin::Info-->
             <div class="d-flex align-items-center flex-wrap mr-2">
                 <!--begin::Page Title-->
-                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Chỉnh sửa danh mục sản phẩm</h5>
+                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Tạo mới danh mục sản phẩm</h5>
                 <!--end::Page Title-->
             </div>
             <!--end::Info-->
@@ -28,16 +28,17 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label>Tên danh mục</label>
-                            <input type="text" name="name" class="form-control" placeholder="Nhập vào tên danh mục" value="<?php echo $category['name'] ?>" />
+                            <input type="text" name="name" class="form-control" placeholder="Nhập vào tên danh mục" />
                             <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                         </div>
                         <div class="form-group mb-1">
                             <label for="descriptionCategoryInput">Mô tả danh mục</label>
-                            <textarea name="description" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $category['description'] ?></textarea>
+                            <textarea name="description" class="form-control" id="descriptionCategoryInput" rows="3"></textarea>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-primary mr-2">Chỉnh sửa</button>
+                        <button type="submit" class="btn btn-primary mr-2">Tạo mới</button>
+                        <button type="reset" class="btn btn-secondary">Làm lại</button>
                         <a href="?role=admin&mod=category" class="btn btn-default">Quay về</a>
                     </div>
                 </form>

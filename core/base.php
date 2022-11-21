@@ -220,7 +220,7 @@ function get_auth()
 function request_auth($isLogin = true)
 {
     if (is_auth() !== $isLogin) {
-        header("Location: " . ($isLogin ? '/?role=admin&mod=auth' : '/?role=admin'));
+        header("Location: " . ($isLogin ? '?role=admin&mod=auth' : '?role=admin'));
         die;
     }
 }

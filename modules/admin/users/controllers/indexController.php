@@ -12,19 +12,26 @@ function indexAction() {
     $data['list_users'] = $list_users;
     load_view('index', $data);
 }
-
+function createAction() {
+    load_view('create');
+}
 function addAction() {
     echo "Thêm dữ liệu";
 }
-
+function createPostAction() {
+    $name = $_POST['name'];
+    $description = $_POST['description'];
+    if (empty($name)) {
+        push_notification('danger', ['Vui lòng nhập vào tên danh mục']);
+        header('Location: ?role=admin&mod=category&action=create');
+        die();
+    }
+    create_category($name, $description);
+    push_notification('success', ['Tạo mới danh mục sản phẩm thành công']);
+    header('Location: ?role=admin&mod=category');
+}
 function editAction() {
     $id = (int)$_GET['id'];
     $item = get_user_by_id($id);
     show_array($item);
-}
-
-function testAction() {
-    $data = [];
-    $data['title'] = "Nguyễn Văn A";
-    load_view('test', $data);
 }

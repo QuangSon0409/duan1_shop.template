@@ -1,4 +1,8 @@
 <?php get_header('', 'Tạo mới sản phẩm') ?>
+<?php
+    include "modules/admin/category/models/indexModel.php";
+    $categories = get_list_categories();
+?>
 
 <!--begin::Subheader-->
 <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
@@ -88,20 +92,22 @@
                             </div>
                         </div>
                         <div class="col col-9">
-                            <div><label>Hình ảnh sản phẩm</label></div>
-                            <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_3">
+                                <label>Hình ảnh sản phẩm</label>
+                                <input type="file" name="fileToUpload" id="fileToUpload">
+                            
+                            <!-- <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_3">
                                 <div class="dropzone-msg dz-message needsclick">
                                     <h3 class="dropzone-msg-title">Kéo thả hình ảnh cần upload</h3>
                                     <span class="dropzone-msg-desc">Chỉ chấp nhận tải lên file hình ảnh</span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary mr-2">Tạo mới</button>
                     <button type="reset" class="btn btn-secondary">Làm lại</button>
-                    <a href="/?role=admin&mod=category" class="btn btn-default">Quay về</a>
+                    <a href="?role=admin&mod=production" class="btn btn-default">Quay về</a>
                 </div>
             </form>
             <!--end::Form-->

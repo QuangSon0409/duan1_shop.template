@@ -6,7 +6,7 @@ var KTDropzoneDemo = function () {
     var demo1 = function () {
         // single file upload
         $('#kt_dropzone_1').dropzone({
-            url: "/?role=admin&mod=script&action=upload", // Set the url for your upload script location
+            url: "&mod=script&action=upload", // Set the url for your upload script location
             paramName: "file", // The name that will be used to transfer the file
             maxFiles: 1,
             maxFilesize: 5, // MB
@@ -22,7 +22,7 @@ var KTDropzoneDemo = function () {
 
         // multiple file upload
         $('#kt_dropzone_2').dropzone({
-            url: "/?role=admin&mod=script&action=upload", // Set the url for your upload script location
+            url: "?role=admin&mod=script&action=upload", // Set the url for your upload script location
             paramName: "file", // The name that will be used to transfer the file
             maxFiles: 10,
             maxFilesize: 10, // MB
@@ -38,7 +38,7 @@ var KTDropzoneDemo = function () {
 
         // file type validation
         $('#kt_dropzone_3').dropzone({
-            url: "/?role=admin&mod=script&action=upload", // Set the url for your upload script location
+            url: "?role=admin&mod=script&action=upload", // Set the url for your upload script location
             paramName: "file", // The name that will be used to transfer the file
             maxFiles: 10,
             maxFilesize: 10, // MB
@@ -65,7 +65,7 @@ var KTDropzoneDemo = function () {
         previewNode.remove();
 
         var myDropzone4 = new Dropzone(id, { // Make the whole body a dropzone
-            url: "/?role=admin&mod=script&action=upload", // Set the url for your upload script location
+            url: "?role=admin&mod=script&action=upload", // Set the url for your upload script location
             parallelUploads: 20,
             previewTemplate: previewTemplate,
             maxFilesize: 1, // Max filesize in MB
@@ -137,7 +137,7 @@ var KTDropzoneDemo = function () {
          previewNode.remove();
 
          var myDropzone5 = new Dropzone(id, { // Make the whole body a dropzone
-             url: "/?role=admin&mod=script&action=upload", // Set the url for your upload script location
+             url: "?role=admin&mod=script&action=upload", // Set the url for your upload script location
              parallelUploads: 20,
              maxFilesize: 1, // Max filesize in MB
              previewTemplate: previewTemplate,
